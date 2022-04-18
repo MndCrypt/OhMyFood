@@ -1,22 +1,22 @@
 {
-  "name": "ohmyfood_azzoug_menad",
-  "version": "1.0.0",
-  "description": "OhMyFood OC",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MndCrypt/OhMyFood.git"
-  },
-  "author": "Menad AZZOUG",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MndCrypt/OhMyFood/issues"
-  },
-  "homepage": "https://github.com/MndCrypt/OhMyFood#readme",
-  "devDependencies": {
-    "sass": "^1.50.0"
-  }
+    "name": "ohmyfood_azzoug_menad",
+    "version": "1.0.0",
+    "description": "OhMyFood OC",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch style.scss style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MndCrypt/OhMyFood.git"
+    },
+    "author": "Menad AZZOUG",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MndCrypt/OhMyFood/issues"
+    },
+    "homepage": "https://github.com/MndCrypt/OhMyFood#readme",
+    "devDependencies": {
+        "sass": "^1.50.0"
+    }
 }
