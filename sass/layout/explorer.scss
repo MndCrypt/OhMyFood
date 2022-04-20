@@ -21,6 +21,7 @@
         @include linear-gradient.gradient(0.9);
     }
     & button:hover {
+        cursor: pointer;
         transform: scale(1.02);
         opacity: 0.9;
     }

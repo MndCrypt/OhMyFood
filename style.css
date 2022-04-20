@@ -76,6 +76,7 @@ header {
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explorer button:hover {
+  cursor: pointer;
   transform: scale(1.02);
   opacity: 0.9;
 }
@@ -118,6 +119,7 @@ header {
   transform: translateY(50%);
 }
 .tuto li:hover {
+  cursor: pointer;
   transform: scale(1.02);
 }
 .tuto li i.fa-solid {
@@ -159,18 +161,8 @@ header {
   height: 15rem;
   background-size: cover;
   border-radius: 1rem 1rem 0 0;
-}
-.menus .card__image-1 {
-  background-image: url("https://ohmyfood.mathisbarre.com/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg");
-}
-.menus .card__image-2 {
-  background-image: url("https://ohmyfood.mathisbarre.com/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg");
-}
-.menus .card__image-3 {
-  background-image: url("https://ohmyfood.mathisbarre.com/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg");
-}
-.menus .card__image-4 {
-  background-image: url("https://ohmyfood.mathisbarre.com/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg");
+  width: 100%;
+  object-fit: cover;
 }
 .menus .card__description {
   position: relative;

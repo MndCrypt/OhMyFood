@@ -35,6 +35,7 @@
         border-radius: 1rem;
         @include box-shadow.base-shadow;
         &:hover {
+            cursor: pointer;
             @include zoom.zoom;
         }
         & i.fa-solid {
