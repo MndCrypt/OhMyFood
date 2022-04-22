@@ -1,5 +1,4 @@
-@use "../utils/box-shadow.scss";
-@use "../utils/zoom.scss";
+@use "../utils/mixins.scss";
 @use "../utils/colors.scss";
 .tuto {
     counter-reset: steps;
@@ -33,10 +32,10 @@
         padding: 1.5rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
-        @include box-shadow.base-shadow;
+        @include mixins.base-shadow;
         &:hover {
             cursor: pointer;
-            @include zoom.zoom;
+            @include mixins.zoom;
         }
         & i.fa-solid {
             margin-right: 1rem;
