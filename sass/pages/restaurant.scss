@@ -2,6 +2,14 @@
 @use "../utils/colors.scss";
 @use "../utils/animations.scss";
 #body-restaurant1 {
+    header::before {
+        @include mixins.font-awesome($font-weight: 900);
+        content: "\f060";
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 25px;
+    }
     .banner img {
         display: block;
         width: 100%;
@@ -31,6 +39,20 @@
         gap: 1rem;
         @media (max-width: 1000px) {
             // grid-template-columns: 1fr;
+        }
+        h3 {
+            text-transform: uppercase;
+            font-weight: 400;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 1.5rem;
+                left: 0;
+                height: 0.25rem;
+                width: 3rem;
+                background-color: colors.$tertiary;
+            }
         }
         .menu-group {
             overflow: hidden;
@@ -78,6 +100,7 @@
                     }
                 }
                 &:hover {
+                    cursor: pointer;
                     .menu-item__check {
                         margin-right: 0;
                     }
@@ -86,6 +109,14 @@
                     }
                 }
             }
+        }
+    }
+    section.order {
+        height: 30vh;
+        display: grid;
+        place-items: center;
+        button {
+            @include mixins.button;
         }
     }
 }
