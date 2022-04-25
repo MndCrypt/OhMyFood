@@ -51,7 +51,7 @@ header {
   gap: 1rem;
   background-color: #f3f3f3;
   text-align: center;
-  padding: 0.5rem;
+  padding: 1.5rem;
 }
 .city i {
   font-size: 1.5rem;
@@ -242,6 +242,16 @@ footer p {
     transform: rotate(0);
   }
 }
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 #body-restaurant1 header::before {
   display: inline-block;
   position: absolute;
@@ -326,14 +336,20 @@ footer p {
   background-color: #f6f6f6;
 }
 #body-restaurant1 .menu-choice {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+@media (max-width: 1000px) {
+  #body-restaurant1 .menu-choice {
+    grid-template-columns: 1fr;
+  }
 }
 #body-restaurant1 .menu-choice h3 {
   text-transform: uppercase;
   font-weight: 400;
   position: relative;
+  margin-bottom: 1.5rem;
 }
 #body-restaurant1 .menu-choice h3::after {
   content: "";
@@ -354,6 +370,17 @@ footer p {
   overflow: hidden;
   margin: 0.5rem;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  animation: appear 1s;
+  animation-fill-mode: both;
+}
+#body-restaurant1 .menu-choice .menu-group .menu-item:nth-child(2) {
+  animation-delay: 200ms;
+}
+#body-restaurant1 .menu-choice .menu-group .menu-item:nth-child(3) {
+  animation-delay: 300ms;
+}
+#body-restaurant1 .menu-choice .menu-group .menu-item:nth-child(4) {
+  animation-delay: 400ms;
 }
 #body-restaurant1 .menu-choice .menu-group .menu-item .menu-item__price {
   margin-left: auto;

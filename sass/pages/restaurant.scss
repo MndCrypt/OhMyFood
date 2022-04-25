@@ -32,18 +32,17 @@
         background-color: #f6f6f6;
     }
     .menu-choice {
-        display: flex;
-        flex-direction: column;
-        // display: grid;
-        // grid-template-columns: repeat(3, 1fr); Le temps de débuguer
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         @media (max-width: 1000px) {
-            // grid-template-columns: 1fr;
+            grid-template-columns: 1fr;
         }
         h3 {
             text-transform: uppercase;
             font-weight: 400;
             position: relative;
+            margin-bottom: 1.5rem;
             &::after {
                 content: "";
                 position: absolute;
@@ -57,12 +56,19 @@
         .menu-group {
             overflow: hidden;
             .menu-item {
+                @for $i from 2 through 4 {
+                    &:nth-child(#{$i}) {
+                        animation-delay: 100ms * $i;
+                    }
+                }
                 display: flex;
                 background-color: white;
                 border-radius: 1rem;
                 overflow: hidden;
                 margin: 0.5rem;
                 @include mixins.base-shadow;
+                animation: appear 1s;
+                animation-fill-mode: both;
                 .menu-item__price {
                     margin-left: auto;
                     font-weight: 900;
