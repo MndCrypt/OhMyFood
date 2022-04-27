@@ -82,6 +82,37 @@ header {
   opacity: 0.9;
 }
 
+.loader {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  opacity: 0.9;
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: disappear 200ms;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+.loader i {
+  color: #9356DC;
+  animation: spinner 3s infinite ease-in;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .tuto {
   counter-reset: steps;
   margin-bottom: 2rem;
