@@ -64,6 +64,9 @@ header {
 .explorer p {
   padding: 1rem;
 }
+.explorer h2 {
+  margin: 1rem;
+}
 .explorer button {
   color: white;
   font-weight: 300;
@@ -153,6 +156,9 @@ header {
 .tuto li:hover {
   cursor: pointer;
   transform: scale(1.02);
+}
+.tuto li:hover i::before {
+  color: #9356DC;
 }
 .tuto li i.fa-solid {
   margin-right: 1rem;
@@ -445,7 +451,7 @@ footer p {
   display: grid;
   place-items: center;
   background-color: white;
-  aspect-ratio: 1;
+  height: 2rem;
   width: 2rem;
   border-radius: 1rem;
 }

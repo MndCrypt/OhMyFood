@@ -8,6 +8,9 @@
     & p {
         padding: 1rem;
     }
+    & h2 {
+        margin: 1rem;
+    }
     & button {
         @include mixins.button;
     }
