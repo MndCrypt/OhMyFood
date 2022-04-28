@@ -170,6 +170,9 @@ header {
   background-color: #f6f6f6;
   margin-bottom: 2rem;
 }
+#homepage .menus h2 {
+  margin-bottom: inherit;
+}
 #homepage .menus .menus__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
